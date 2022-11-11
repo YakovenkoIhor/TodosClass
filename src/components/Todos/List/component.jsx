@@ -4,7 +4,7 @@ import Item from "./Item";
 
 import './styles.scss';
 
-const List = ({ todos, onRemoveTodo }) => (
+const List = ({ todos, onRemoveTodo, onCheckTodo }) => (
   <ul className="list">
     {todos.map(({ id, value }) => (
       <Item
@@ -12,6 +12,7 @@ const List = ({ todos, onRemoveTodo }) => (
         id={id}
         value={value}
         onRemoveTodo={onRemoveTodo}
+        onCheckTodo={onCheckTodo}
       />
     ))}
   </ul>

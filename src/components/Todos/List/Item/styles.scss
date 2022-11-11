@@ -12,3 +12,6 @@
     margin-bottom: 0;
   }
 }
+input:checked + span {
+	text-decoration: line-through;
+}

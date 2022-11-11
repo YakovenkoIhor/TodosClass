@@ -43,8 +43,19 @@ class Todos extends React.Component {
     })
   }
 
-  handleCheckTodo = () => {
-    // TODO: Write your logic for check todo here
+  handleCheckTodo = (checkId) => {
+    const { todos } = this.state;
+
+    const updatedTodos = todos.map(todo => {
+      if(todo.id === checkId){
+        return {...todo, checked: !todo.checked}
+      }
+      return todo
+    });
+
+    this.setState({
+      todos: updatedTodos
+    })
   }
 
   get isTodosEmpty() {
@@ -64,6 +75,7 @@ class Todos extends React.Component {
         onEnterTodo={this.handleEnterTodo}
         onAddTodo={this.handleAddTodo}
         onRemoveTodo={this.handleRemoveTodo}
+        onCheckTodo={this.handleCheckTodo}
       />
     )
   }
