@@ -19,7 +19,11 @@ class Todos extends React.Component {
   }
 
   handleAddTodo = () => {
+
     const { enterTodo, todos } = this.state;
+
+    if(enterTodo==='') return
+    
 
     const newTodo = {
       id: Math.round(Math.random() * 100),
