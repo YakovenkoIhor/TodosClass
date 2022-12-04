@@ -2,7 +2,11 @@ import React from 'react';
 
 import TodosComponent from "./component";
 
+// import useTestHook from "../../hooks"
+
 import './styles.scss';
+
+// useTestHook()
 
 class Todos extends React.Component {
   constructor(props) {
@@ -13,7 +17,7 @@ class Todos extends React.Component {
       todos: [],
     };
   }
-
+  // useTestHook()
   handleEnterTodo = e => {
     this.setState({ enterTodo: e.target.value });
   }

@@ -1,15 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import {BrowserRouter} from 'react-router-dom'
+import { Provider } from 'react-redux'
+// import {createStore} from 'redux'
+// import { composeWithDevTools } from 'redux-devtools-extension';
 
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './store/configureStore';
+
+// const reducer = (state = {test: 'lorem'}, action) => {
+//     switch (action.type){
+//         case "TEST_ACTION":
+//             return {
+//                 ...state,
+//                 mock: 'value'
+//             }
+//         default:
+//             return state;
+//     }
+// }
+
+// const store = createStore(reducer, composeWithDevTools())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Provider store={store}>
+        <App />
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

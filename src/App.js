@@ -1,9 +1,12 @@
-import Todos from "./components/Todos";
+import Todos from "./components/TodosRedux";
+// import Posts from './components/Posts'
 
 import './App.css';
 
 const App = () => (
   <div className="App">
+    
+    {/* <Posts /> */}
     <Todos/>
   </div>
 );
